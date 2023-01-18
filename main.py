@@ -7,7 +7,11 @@ import random
 #Get the Users Choice
 def getUserChoice():
     options = ["rock", "paper", "scissors"]
+    
+    #Get the User's input
     userInput = input("Enter your choice (rock, paper, scissors) or press 'e' to exit the game: ").lower()
+    
+    #If invalid Input
     while userInput not in options and userInput != 'e':
         print("Invalid choice. Please enter rock, paper, scissors or press 'e' to exit the game.")
         userInput = input("Enter your choice (rock, paper, scissors) or press 'e' to exit the game: ").lower()
@@ -20,6 +24,7 @@ def getComputerChoice():
 
 #Determine who wins
 def getRoundResult(userInput, computerChoice):
+    
     if userInput == computerChoice:
         return "tie"
     elif userInput == "rock" and computerChoice == "scissors":
